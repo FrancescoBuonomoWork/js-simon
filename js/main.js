@@ -1,53 +1,45 @@
 // console.log("funziona");
 
 let randomNumberArray = [];
-for(let i = 0; i < 5;i++){
-    const randomNumber = getRandomInt(1,100);
-    const randomNumberAlert = alert(randomNumber);
+for (let i = 0; i < 5; i++) {
+    const randomNumber = getRandomInt(1, 100);
     console.log(randomNumber);
+    const randomNumberAlert = alert(randomNumber);
     console.log(randomNumberAlert);
-    // const n = getRandomInt(1, 100);
-    // console.log(n);
     randomNumberArray.push(randomNumber);
-
+    
 }
 console.log(randomNumberArray);
 
-// const prova = getRandomInt(1,10);
-// const alerto = alert(prova);
-// console.log(alerto);
-// console.log(prova);
 
-// let userNumberArray = [];
-// setTimeout(function(){
-//     for (let i = 0; i < 5;i++) {
-//         const userNumber = parseInt(prompt("inserisci i numeri"));
-//         console.log(userNumber);
-//         userNumberArray.push(userNumber);
-        
-//     }
-    
-//     console.log(userNumberArray);
-// },3000);
+setTimeout(function () {
+    let userNumberArray = [];
+    for (let i = 0; i < 5; i++) {
+        const userNumber = parseInt(prompt("inserisci i numeri"));
+        console.log(userNumber);
+        userNumberArray.push(userNumber);
+    }
+    console.log(userNumberArray);
+    console.log(randomNumberArray);
+    let samenumbersCount = 0;
+    for (let i = 0; i < userNumberArray.length;i++) {
+        const currentNumber = userNumberArray[i];
+        let sameNumbers = [];
+        // console.log(currentNumber);
+        if (randomNumberArray[i] === currentNumber) {
+            samenumbersCount += 1
+            sameNumbers.push(currentNumber);
+            // console.log(sameNumbers);
+        }
+        console.log("i numeri indovinati sono: "+ samenumbersCount + "e sono i numeri "+ sameNumbers);
+        // console.log("i numeri indovinati sono:" + currentNumber);
+    }
 
+    // return userNumberArray
+    // console.log(userNumberArray.includes(2));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}, 3000);
+// console.log(userNumberArray);
 
 
 
@@ -61,3 +53,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
     // The maximum is exclusive and the minimum is inclusive
 }
+// const prova = getRandomInt(1,10);
+// const alerto = alert(prova);
+// console.log(alerto);
+// console.log(prova);
