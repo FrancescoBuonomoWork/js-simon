@@ -1,10 +1,28 @@
 // console.log("funziona");
 
-let RandomNumberArray = [];
-for(let i = 0; i < 5;i++){
-    RandomNumberArray = parseInt(alert(getRandomInt(1, 100)));
-    console.log(RandomNumberArray);
-}
+// let randomNumberArray = [];
+// for(let i = 0; i < 5;i++){
+//     const randomNumber = (alert(getRandomInt(1, 100)));
+//     console.log(randomNumber);
+//     const n = getRandomInt(1, 100);
+//     console.log(n);
+//     randomNumberArray.push(n);
+
+// }
+// console.log(randomNumberArray);
+
+let userNumberArray = [];
+setTimeout(function(){
+    for (let i = 0; i < 5;i++) {
+        const userNumber = parseInt(prompt("inserisci i numeri"));
+        console.log(userNumber);
+        userNumberArray.push(userNumber);
+        
+    }
+    
+    console.log(userNumberArray);
+},3000);
+
 
 
 
