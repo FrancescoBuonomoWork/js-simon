@@ -4,11 +4,9 @@ let randomNumberArray = [];
 for (let i = 0; i < 5; i++) {
     const randomNumber = getRandomInt(1, 100);
     console.log(randomNumber);
-    const randomNumberAlert = alert(randomNumber);
-    console.log(randomNumberAlert);
-    randomNumberArray.push(randomNumber);
-    
+    randomNumberArray.push(randomNumber);    
 }
+alert(randomNumberArray);
 console.log(randomNumberArray);
 
 
@@ -23,10 +21,13 @@ setTimeout(function () {
     console.log(randomNumberArray);
     let samenumbersCount = 0;
     let sameNumbers = [];
+    // confronto l array dei valori passiti con quelli generati 
+
+
+    
     for (let i = 0; i < userNumberArray.length;i++) {
-        const currentNumber = userNumberArray[i];
         // console.log(currentNumber);
-        if (randomNumberArray[i] === currentNumber) {
+        if (randomNumberArray[i] === userNumberArray[i]) {
             samenumbersCount += 1
             sameNumbers.push(currentNumber);
             // console.log(sameNumbers);
