@@ -4,7 +4,7 @@ let randomNumberArray = [];
 for (let i = 0; i < 5; i++) {
     const randomNumber = getRandomInt(1, 100);
     console.log(randomNumber);
-    randomNumberArray.push(randomNumber);    
+    randomNumberArray.push(randomNumber);
 }
 alert(randomNumberArray);
 console.log(randomNumberArray);
@@ -12,29 +12,41 @@ console.log(randomNumberArray);
 
 setTimeout(function () {
     let userNumberArray = [];
+    let sameNumbers = [];
+    let samenumbersCount = 0;
     for (let i = 0; i < 5; i++) {
         const userNumber = parseInt(prompt("inserisci i numeri"));
         console.log(userNumber);
         userNumberArray.push(userNumber);
+
+         // confronto l array dei valori passiti con quelli generati 
+        if (randomNumberArray.includes(userNumber)) {
+            sameNumbers.push(userNumber);
+            samenumbersCount += 1
+        }
     }
     console.log(userNumberArray);
     console.log(randomNumberArray);
-    let samenumbersCount = 0;
-    let sameNumbers = [];
-    // confronto l array dei valori passiti con quelli generati 
+    console.log(sameNumbers);
+    console.log(samenumbersCount);
+
+    console.log("i numeri indovinati sono: " + samenumbersCount + " e sono i numeri " + sameNumbers);
 
 
-    
-    for (let i = 0; i < userNumberArray.length;i++) {
-        // console.log(currentNumber);
-        if (randomNumberArray[i] === userNumberArray[i]) {
-            samenumbersCount += 1
-            sameNumbers.push(currentNumber);
-            // console.log(sameNumbers);
-        }
-        // console.log("i numeri indovinati sono:" + currentNumber);
-    }
-    console.log("i numeri indovinati sono: "+ samenumbersCount + " e sono i numeri "+ sameNumbers);
+
+
+   
+
+    // for (let i = 0; i < userNumberArray.length;i++) {
+    //     // console.log(currentNumber);
+    //     if (randomNumberArray[i] === userNumberArray[i]) {
+    //         samenumbersCount += 1
+    //         sameNumbers.push(currentNumber);
+    //         // console.log(sameNumbers);
+    //     }
+    //     // console.log("i numeri indovinati sono:" + currentNumber);
+    // }
+    // console.log("i numeri indovinati sono: "+ samenumbersCount + " e sono i numeri "+ sameNumbers);
 
     // return userNumberArray
     // console.log(userNumberArray.includes(2));
